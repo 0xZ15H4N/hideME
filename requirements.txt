@@ -1,2 +1,2 @@
-art==5.9
-random-word==1.0.9
+art==6.3
+random-word==1.0.13
