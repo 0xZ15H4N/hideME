@@ -7,7 +7,7 @@ In order to use the tool first install all the requirements from requirements.tx
 
 `pip install -r requirements.txt`
 
-then simply navigate to  `src` dir and run `python3 ./hideME.py`
+then simply navigate to  `src` dir and run `python ./hideME.py`
 
 It simply ask for the file name and write random words into it  , the size of the random words can be increased manually! and then hide the hidden text 
 
