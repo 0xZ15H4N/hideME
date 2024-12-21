@@ -1,2 +1,5 @@
-art==6.3
-random-word==1.0.13
+art
+random-word
+base64
+secrets
+requests
