@@ -1,13 +1,13 @@
-                                       A simple Tool that spread or hide the ciphered text across the random file !
+A simple Tool that spread or hide the ciphered text across the random file !
 
 
 ![image](https://github.com/user-attachments/assets/af18152e-3dd0-47fa-87c4-7968ea6843e6)
 
 In order to use the tool first install all the requirements from requirements.txt as 
 
-`pip install -r ../requirements.txt`
+`pip install -r requirements.txt`
 
-then simply run python3 or python followd by the program name hideMe.py
+then simply navigate to  `src` dir and run `python3 ./hideME.py`
 
 It simply ask for the file name and write random words into it  , the size of the random words can be increased manually! and then hide the hidden text 
 
