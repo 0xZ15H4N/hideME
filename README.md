@@ -1,4 +1,4 @@
-A simple Tool that spread or hide the ciphered text across the random file !
+A simple Tool that spread or hide the ciphered text across the random Text inside a file !
 
 
 ![image](https://github.com/user-attachments/assets/af18152e-3dd0-47fa-87c4-7968ea6843e6)
