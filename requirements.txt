@@ -1,5 +1,4 @@
 art
 random-word
-base64
 secrets
 requests
