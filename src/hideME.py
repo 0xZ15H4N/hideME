@@ -4,7 +4,6 @@ import random
 from random_word import RandomWords
 import base64
 import secrets
-import requests
 # this seems usefull ;xD
 #sequence [945, 489, 109, 976, 514, 605, 457, 535, 416, 676, 621, 964, 452, 818, 250, 958, 324, 874, 805, 141, 67, 734, 350, 62, 963, 405, 637, 906]
 #sequence [680, 698, 491, 85, 923, 443, 737, 704, 19, 765, 646, 96, 944, 153]
