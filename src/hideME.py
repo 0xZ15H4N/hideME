@@ -6,8 +6,7 @@ import base64
 import secrets
 import string
 # this seems usefull ;xD
-#sequence [945, 489, 109, 976, 514, 605, 457, 535, 416, 676, 621, 964, 452, 818, 250, 958, 324, 874, 805, 141, 67, 734, 350, 62, 963, 405, 637, 906]
-#sequence [680, 698, 491, 85, 923, 443, 737, 704, 19, 765, 646, 96, 944, 153]
+#[169, 643, 152, 691, 822, 421, 318, 71, 944, 427, 342, 937, 264, 936, 825, 590, 381]
 
 #global variables
 font = ["dancingfonts","defleppard","fire_font-s",'nancyj-fancy',"rammstein","standard","3d_diagonal","wetletter"] # i have pre-selected some of the font!
@@ -110,7 +109,7 @@ def decrypt(cipher_text):
 
 if __name__ == "__main__":
     welcome()
-    ch = input("Encrypt or decrypt [E/e or D/d] : ")
+    ch = input("[*] Encrypt or decrypt [E/e or D/d] : ")
     if(ch == "E" or ch == "e"):
         options()
         ipt = int(input("[*] Enter the Choice : "))
@@ -132,10 +131,9 @@ if __name__ == "__main__":
         print("[*] Base64 decyphered : ",hidden_text[1])
         print("[*] Cesar Ciphered : ",hidden_text[2])
         
-    elif(ch != "E" or ch != "e" or ch != "D" or ch != "d" ):
-        print("[*] Invalid Input\nGood Bye🙋")
-        
-    
+    elif(ch not in "EeDd"):
+        print("[*] Invalid Input\n[*] Good Bye🙋")
+        exit(0)
     
     
     
