@@ -4,6 +4,7 @@ import random
 from random_word import RandomWords
 import base64
 import secrets
+import string
 # this seems usefull ;xD
 #sequence [945, 489, 109, 976, 514, 605, 457, 535, 416, 676, 621, 964, 452, 818, 250, 958, 324, 874, 805, 141, 67, 734, 350, 62, 963, 405, 637, 906]
 #sequence [680, 698, 491, 85, 923, 443, 737, 704, 19, 765, 646, 96, 944, 153]
@@ -23,12 +24,22 @@ def options():
     print("[*] 3. To hide data in Ceasar Ciphered")
     print("[*] 4. To hide Your Own ciphered Text")
 
+
+
+def generate_gibberish_word(min_length=3, max_length=10):
+    length = random.randint(min_length, max_length)
+    return ''.join(random.choices(string.ascii_lowercase + string.digits + "-,", k=length))
+
+def generate_gibberish_sentence(word_count=10):
+    return ' '.join(generate_gibberish_word() for _ in range(word_count))
+
+
+
 def genrate_random_text(size):
-    r = RandomWords()
-    # Generate N(size) random words
-    random_words = " ".join([r.get_random_word() for _ in range(size)])
+    return generate_gibberish_sentence(size)
+
     
-    return random_words
+
 
 def encrypt(hidden_text,Mode):
     if(Mode == 1 or Mode == 4 ):
@@ -103,7 +114,7 @@ if __name__ == "__main__":
     if(ch == "E" or ch == "e"):
         options()
         ipt = int(input("[*] Enter the Choice : "))
-        file = input("[*] Enter the file name in which you want to hide [hidden text] : ")
+        file = input("[*] Enter the file name in which you want to hide (with .txt) [hidden text] : ")
         hidden_text = input("[*] Enter the hidden text : ")
         cipher_text  = encrypt(hidden_text,ipt) 
         with open(file,"w") as f:
@@ -112,14 +123,17 @@ if __name__ == "__main__":
         print("[*] The following Text has been Successfully hidden inside the file : ",file)
         print("[*] Sequence to Extract the file is", sequence)
     
+    
     if(ch == "D" or ch == "d"):
-        file = input("[*] Enter the file name : ")
+        file = input("[*] Enter the file name (with .txt) : ")
         sequence = eval(input("[*] Enter The Sequence inclosed in  [] : "))
         hidden_text = unHideME(file,sequence)
         print("[*] The hidden data Extracted from the file is : ",hidden_text[0])
         print("[*] Base64 decyphered : ",hidden_text[1])
         print("[*] Cesar Ciphered : ",hidden_text[2])
         
+    elif(ch != "E" or ch != "e" or ch != "D" or ch != "d" ):
+        print("[*] Invalid Input\nGood Bye🙋")
         
     
     
