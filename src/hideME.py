@@ -15,7 +15,7 @@ font = ["dancingfonts","defleppard","fire_font-s",'nancyj-fancy',"rammstein","st
 def welcome():
     welcome_message = '''          hideME'''
     tprint(welcome_message,font=font[random.randint(0,len(font)-1)])
-    print("\t\t\tMaintained by : 0xZ15H4N (https://github.com/1337-pr05)")
+    print("\t\t\tMaintained by : 0xZ15H4N (https://github.com/0xZ15H4N)")
 
 def options():
     print("[*] 1. To hide data in clear text")
